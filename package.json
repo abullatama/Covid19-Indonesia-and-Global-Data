@@ -17,7 +17,9 @@
     "url": "https://github.com/abullatama/Covid19-Indonesia-and-Global-Data/issues"
   },
   "homepage": "https://github.com/abullatama/Covid19-Indonesia-and-Global-Data#readme",
-  "dependencies": {},
+  "dependencies": {
+    "feather-icons": "^4.28.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.13.8",
     "@babel/preset-env": "^7.13.9",

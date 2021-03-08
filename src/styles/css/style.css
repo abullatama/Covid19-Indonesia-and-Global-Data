@@ -1,1 +1,79 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&display=swap");
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "IBM Plex Sans", sans-serif;
+  background-color: #f2f3f9;
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+
+ul,
+li {
+  list-style-type: none;
+  display: inline;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-jc-sb {
+  justify-content: space-between;
+}
+
+.flex-jc-c {
+  justify-content: center;
+}
+
+.flex-ai-c {
+  align-items: center;
+}
+
+.container {
+  max-width: 71.25rem;
+  padding: 0 0.75rem;
+  margin: 0 auto;
+}
+
+.header {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  background: #fff;
+  border-bottom: 1px solid #eaedf1;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.header__links {
+  padding: 0.9375rem;
+}
+
+.header__links a {
+  padding: 0.9375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: black;
+}
+
+.header__links a:not(:last-child) {
+  border-right: 1px solid #eaedf1;
+}
+/*# sourceMappingURL=style.css.map */
