@@ -1,0 +1,58 @@
+@keyframes pop-in {
+  from {
+    right: -260px;
+    visibility: hidden;
+    opacity: 0;
+  }
+  to {
+    right: 0;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes pop-out {
+  from {
+    right: 0;
+    visibility: visible;
+    opacity: 1;
+  }
+  to {
+    right: -260px;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes flow-in {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes flow-out {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.pop-in {
+  animation: pop-in 300ms ease-in-out forwards;
+  .overflow {
+    animation: flow-in 2s ease-in-out forwards;
+  }
+}
+
+.pop-out {
+  animation: pop-out 300ms ease-in-out forwards;
+}

@@ -16,6 +16,18 @@ body {
   padding: 0;
   font-family: "IBM Plex Sans", sans-serif;
   background-color: #f2f3f9;
+  main {
+    position: relative;
+    right: 0;
+    transition: right 300ms ease-in-out;
+  }
+  &.active {
+    main {
+      position: fixed;
+      min-width: 100%;
+      right: 16.25rem;
+    }
+  }
 }
 
 a,
@@ -51,4 +63,15 @@ li {
   max-width: 71.25rem;
   padding: 0 0.75rem;
   margin: 0 auto;
+}
+
+.hide-for-mobile {
+  @include breakpoint-down(sm) {
+    display: none;
+  }
+}
+.hide-for-desktop {
+  @include breakpoint-up(md) {
+    display: none;
+  }
 }
