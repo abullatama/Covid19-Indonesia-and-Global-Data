@@ -1,8 +1,16 @@
 .header {
+  position: fixed;
+  top: 0;
+  width: 100%;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
   background: #fff;
   border-bottom: 1px solid #eaedf1;
+  box-shadow: 0 8px 24px #f8f5fb;
+
+  @include breakpoint-down(md) {
+    padding: 0;
+  }
 
   h1 {
     margin: 0;
@@ -63,18 +71,8 @@
     width: 100%;
     height: 100% !important;
     z-index: 1000;
-    text-align: right;
-    a {
-      display: block;
-      padding: 0.9375rem;
-      font-size: 0.875rem;
-      font-weight: 500;
-      color: black;
+    text-align: left;
 
-      &:not(:last-child) {
-        border-bottom: 1px solid #eaedf1;
-      }
-    }
     .overflow {
       position: fixed;
       opacity: 0;
@@ -93,7 +91,18 @@
       height: auto;
       min-height: 100%;
       background-color: #fff;
-      // visibility: hidden;
+
+      a {
+        display: block;
+        padding: 0.9375rem;
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: black;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid #eaedf1;
+        }
+      }
     }
   }
 }

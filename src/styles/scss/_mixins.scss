@@ -1,16 +1,16 @@
 //Breakpoints
-//640px,1024px,1400px
+//640px,1024px,1200x
 $breakpoints-up: (
   "md": "40rem",
   "lg": "64rem",
-  "xl": "87,5rem",
+  "xl": "75rem",
 );
 
-//639px,1023px,1399px
+//639px,1023px,1199px
 $breakpoints-down: (
   "sm": "39.9375rem",
   "md": "63.9375rem",
-  "lg": "87.4375rem",
+  "lg": "74.9375rem",
 );
 
 @mixin breakpoint-up($size) {

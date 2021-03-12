@@ -63,15 +63,42 @@ li {
   max-width: 71.25rem;
   padding: 0 0.75rem;
   margin: 0 auto;
+  @include breakpoint-down(lg) {
+    max-width: 61.25rem;
+  }
+}
+
+.title {
+  padding: 2rem;
+  padding-top: 5.875rem;
+  margin-bottom: 2rem;
+
+  @include breakpoint-up(lg) {
+    padding-top: 7.375rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 1.65rem;
+  }
+  p {
+    font-size: 1.171875rem;
+    font-weight: 300;
+    margin: 0;
+    text-align: center;
+  }
 }
 
 .hide-for-mobile {
-  @include breakpoint-down(sm) {
+  @include breakpoint-down(md) {
     display: none;
   }
 }
 .hide-for-desktop {
-  @include breakpoint-up(md) {
+  @include breakpoint-up(lg) {
     display: none;
   }
 }
