@@ -2,8 +2,9 @@
   display: grid;
   justify-content: center;
   gap: 1.5rem;
-  grid-template-columns: repeat(4, auto);
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto;
+  width: 100%;
   padding: 10px;
 
   @include breakpoint-down(lg) {
@@ -29,11 +30,6 @@
     &:nth-child(4) {
       background-color: #fc7303;
     }
-  }
-
-  &__content {
-    display: flex;
-    padding: 1.5rem;
 
     p {
       font-size: 0.8125rem;
@@ -49,9 +45,23 @@
     }
   }
 
+  &__content {
+    display: flex;
+    padding: 1.5rem;
+  }
+
   &__emoji {
+    margin-left: auto;
+  }
+
+  .last-update {
+    grid-column: 1 / span 4;
+    margin: 0 auto;
     @include breakpoint-down(lg) {
-      margin-left: auto;
+      grid-column: 1 / span 2;
+    }
+    @include breakpoint-down(sm) {
+      grid-column: auto;
     }
   }
 }
