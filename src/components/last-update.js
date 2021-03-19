@@ -16,7 +16,7 @@ class LastUpdate extends HTMLElement {
         font-size: 0.8125rem;
         font-weight: 400;
         color: black;
-        margin: 0;
+        margin-top: 0;
     }
     </style>
 

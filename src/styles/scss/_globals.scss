@@ -102,3 +102,12 @@ li {
     display: none;
   }
 }
+
+// shadowDOM Styling
+idn-confirmed.black::part(color) {
+  color: black;
+}
+idn-confirmed.white::part(color) {
+  color: white;
+}
+//end
