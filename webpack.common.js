@@ -11,15 +11,23 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/,
+        test: /\.js$/,
         use: [
           {
-            loader: "style-loader",
-          },
-          {
-            loader: "css-loader",
+            loader: "babel-loader",
+            options: {
+              presets: ["@babel/preset-env"],
+            },
           },
         ],
+      },
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"],
+      },
+      {
+        test: /\.(svg|eot|woff|woff2|ttf)$/,
+        use: ["file-loader"],
       },
     ],
   },

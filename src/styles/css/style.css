@@ -70,6 +70,10 @@ html {
   box-sizing: inherit;
 }
 
+p {
+  margin: 0;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -408,5 +412,72 @@ idn-confirmed.white::part(color) {
   font-size: 0.8125rem;
   margin: 0;
   color: #76839a;
+}
+
+.article {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 63.9375rem) {
+  .article {
+    grid-template-columns: repeat(1, auto);
+  }
+}
+
+.article a {
+  border-radius: 5px;
+  box-shadow: 0 8px 24px #e5e4e6;
+}
+
+.article a:nth-child(1) {
+  background: #fc7303;
+}
+
+.article a:nth-child(2) {
+  background: #d43f8d;
+}
+
+.article a:nth-child(3) {
+  background: #09ad95;
+}
+
+.article a:nth-child(4) {
+  background: #f82649;
+}
+
+.article__item {
+  padding: 1.5rem;
+  color: white;
+}
+
+.article__item h4 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.article__item p {
+  margin: 0;
+  font-size: 0.8125rem;
+}
+
+footer {
+  background-color: white;
+  padding: 1.25rem;
+}
+
+footer .footer {
+  text-align: center;
+}
+
+footer .footer .social a {
+  color: black;
+}
+
+footer .footer .author {
+  font-size: 0.875rem;
 }
 /*# sourceMappingURL=style.css.map */
