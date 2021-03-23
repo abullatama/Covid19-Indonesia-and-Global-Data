@@ -1,5 +1,5 @@
 .header {
-  position: fixed;
+  position: relative;
   top: 0;
   width: 100%;
   padding-top: 0.75rem;
@@ -8,17 +8,12 @@
   border-bottom: 1px solid #eaedf1;
   box-shadow: 0 8px 24px #f8f5fb;
 
-  @include breakpoint-down(md) {
-    padding: 0;
-  }
-
   h1 {
     margin: 0;
-    padding: 0.9375rem;
   }
 
   &__links {
-    padding: 0.9375rem;
+    padding: 0.9375rem 0;
     a {
       padding: 0.9375rem;
       font-size: 0.875rem;

@@ -113,29 +113,55 @@
         </div>
       </section>
 
-      <section class="card container">
-        <div class="card__title">
-          <h3>Statistik Kasus Coronavirus di Indonesia</h3>
-        </div>
-        <div class="card__body">
-          <div class="chart">
-            <canvas id="myChart" height="200"></canvas>
+      <section class="container">
+        <div class="card">
+          <div class="card__title">
+            <h3>Statistik Kasus Coronavirus di Indonesia</h3>
           </div>
-          <div class="idnData flex flex-jc-sb">
-            <div class="idnData__item">
-              <h5>POSITIF</h5>
-              <idn-confirmed class="black"></idn-confirmed>
-              <p>ORANG</p>
+          <div class="card__body">
+            <div class="chart">
+              <canvas id="myChart" height="200"></canvas>
             </div>
-            <div class="idnData__item">
-              <h5>SEMBUH</h5>
-              <idn-recovered></idn-recovered>
-              <p>ORANG</p>
+            <div class="idnData flex flex-jc-sb">
+              <div class="idnData__item">
+                <h5>POSITIF</h5>
+                <idn-confirmed class="black"></idn-confirmed>
+                <p>ORANG</p>
+              </div>
+              <div class="idnData__item">
+                <h5>SEMBUH</h5>
+                <idn-recovered></idn-recovered>
+                <p>ORANG</p>
+              </div>
+              <div class="idnData__item">
+                <h5>MENINGGAL</h5>
+                <idn-deaths></idn-deaths>
+                <p>ORANG</p>
+              </div>
             </div>
-            <div class="idnData__item">
-              <h5>MENINGGAL</h5>
-              <idn-deaths></idn-deaths>
-              <p>ORANG</p>
+          </div>
+        </div>
+      </section>
+      <section class="container">
+        <div class="card">
+          <div class="card__title">
+            <h3>Data Kasus Coronavirus di Indonesia Berdasarkan Provinsi</h3>
+          </div>
+          <div class="card__body">
+            <div class="responsive">
+              <idn-data-province></idn-data-province>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="container">
+        <div class="card">
+          <div class="card__title">
+            <h3>Kasus Coronavirus Global</h3>
+          </div>
+          <div class="card__body">
+            <div class="responsive">
+              <global-countries></global-countries>
             </div>
           </div>
         </div>

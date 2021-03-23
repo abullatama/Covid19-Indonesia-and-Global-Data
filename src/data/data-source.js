@@ -5,28 +5,42 @@ import "../components/last-update";
 import "../components/idn-confirmed";
 import "../components/idn-recovered";
 import "../components/idn-deaths";
+import "../components/idn-data-province";
+import "../components/global-countries";
 import "chart.js";
 
 const DataSource = () => {
   const globalUrl = fetch("https://covid19.mathdro.id/api");
   const idnUrl = fetch("https://covid19.mathdro.id/api/countries/IDN");
+  const globalCountries = fetch("https://api.covid19api.com/summary");
   const idnPerMonthUrl = fetch(
     "https://apicovid19indonesia-v2.vercel.app/api/indonesia/harian"
   );
+  const idnProvince = fetch(
+    "https://apicovid19indonesia-v2.vercel.app/api/indonesia/provinsi"
+  );
 
   const getAll = () => {
-    Promise.all([globalUrl, idnUrl, idnPerMonthUrl])
+    Promise.all([
+      globalUrl,
+      idnUrl,
+      idnPerMonthUrl,
+      idnProvince,
+      globalCountries,
+    ])
       .then((response) => {
         return Promise.all(response.map((values) => values.json()));
       })
-      .then(([global, idn, idnPerMonth]) => {
+      .then(([global, idn, idnPerMonth, idnProvince, globalCountries]) => {
         renderAllData(
           global.confirmed,
           global.recovered,
           global.deaths,
           global.lastUpdate,
           idn.recovered,
-          idn.deaths
+          idn.deaths,
+          idnProvince,
+          globalCountries.Countries
         );
         myChart(idnPerMonth);
       })
@@ -76,7 +90,9 @@ const DataSource = () => {
     deaths,
     date,
     IDrecovered,
-    IDDeaths
+    IDDeaths,
+    idnProvince,
+    _globalCountries
   ) => {
     const dataPositive = document.querySelector("data-positive");
     const dataRecovered = document.querySelector("data-recovered");
@@ -84,12 +100,16 @@ const DataSource = () => {
     const idnRecovered = document.querySelector("idn-recovered");
     const idnDeaths = document.querySelector("idn-deaths");
     const lastUpdate = document.querySelector("last-update");
+    const dataProvince = document.querySelector("idn-data-province");
+    const globalCountries = document.querySelector("global-countries");
     dataPositive.covid = numberWithCommas(confirmed.value);
     dataRecovered.covid = numberWithCommas(recovered.value);
     dataDeaths.covid = numberWithCommas(deaths.value);
+    lastUpdate.covid = dateModified(date);
     idnRecovered.covid = numberWithCommas(IDrecovered.value);
     idnDeaths.covid = numberWithCommas(IDDeaths.value);
-    lastUpdate.covid = dateModified(date);
+    dataProvince.covid = idnProvince;
+    globalCountries.covid = _globalCountries;
   };
 
   const myChart = (e) => {

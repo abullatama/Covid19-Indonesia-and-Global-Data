@@ -131,14 +131,7 @@ li {
 
 .title {
   padding: 2rem;
-  padding-top: 5.875rem;
   margin-bottom: 2rem;
-}
-
-@media (min-width: 64rem) {
-  .title {
-    padding-top: 7.375rem;
-  }
 }
 
 .title h1 {
@@ -177,7 +170,7 @@ idn-confirmed.white::part(color) {
 }
 
 .header {
-  position: fixed;
+  position: relative;
   top: 0;
   width: 100%;
   padding-top: 0.75rem;
@@ -187,19 +180,12 @@ idn-confirmed.white::part(color) {
   box-shadow: 0 8px 24px #f8f5fb;
 }
 
-@media (max-width: 63.9375rem) {
-  .header {
-    padding: 0;
-  }
-}
-
 .header h1 {
   margin: 0;
-  padding: 0.9375rem;
 }
 
 .header__links {
-  padding: 0.9375rem;
+  padding: 0.9375rem 0;
 }
 
 .header__links a {
@@ -370,7 +356,10 @@ idn-confirmed.white::part(color) {
 }
 
 .card {
-  padding: 0 0.625rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  box-shadow: 0 8px 24px #e5e4e6;
 }
 
 .card__title {
@@ -388,6 +377,12 @@ idn-confirmed.white::part(color) {
 .card__body {
   padding: 1.5rem;
   background-color: white;
+}
+
+.card__body .responsive {
+  overflow-x: auto;
+  overflow-y: auto;
+  height: 34.375rem;
 }
 
 .card__body .idnData {
