@@ -1,0 +1,64 @@
+{
+  "agencies": [
+    {
+      "name": "Kementerian Kesehatan",
+      "phoneNumber": "021-5210-411",
+      "logo": "https://kawalcorona.com/uploads/unnamed-9mT.png"
+    },
+    {
+      "name": "Kementerian Kesehatan",
+      "phoneNumber": "0812-1212-3119",
+      "logo": "https://kawalcorona.com/uploads/unnamed-9mT.png"
+    },
+    {
+      "name": "Pemprov DKI Jakarta",
+      "phoneNumber": "112",
+      "logo": "https://kawalcorona.com/uploads/logo-dki.png"
+    },
+    {
+      "name": "Pemprov DKI Jakarta",
+      "phoneNumber": "0813-8837-6955",
+      "logo": "https://kawalcorona.com/uploads/logo-dki.png"
+    },
+    {
+      "name": "Pemprov Jawa Tengah",
+      "phoneNumber": "024-358-0713",
+      "logo": "https://kawalcorona.com/uploads/jatengnew.png"
+    },
+    {
+      "name": "Pemprov Jawa Tengah",
+      "phoneNumber": "0823-1360-0560",
+      "logo": "https://kawalcorona.com/uploads/jatengnew.png"
+    },
+    {
+      "name": "Pemprov Jawa Timur",
+      "phoneNumber": "031-843-0313",
+      "logo": "https://kawalcorona.com/uploads/jatim.png"
+    },
+    {
+      "name": "Pemprov Jawa Timur",
+      "phoneNumber": "0813-3436-7800",
+      "logo": "https://kawalcorona.com/uploads/jatim.png"
+    },
+    {
+      "name": "Pemprov Jawa Barat",
+      "phoneNumber": "119",
+      "logo": "https://kawalcorona.com/uploads/jabar.png"
+    },
+    {
+      "name": "Pemprov Jawa Barat",
+      "phoneNumber": "0811-209-3306",
+      "logo": "https://kawalcorona.com/uploads/jabar.png"
+    },
+    {
+      "name": "Pemprov D.I Yogyakarta",
+      "phoneNumber": "0274-555-585",
+      "logo": "https://kawalcorona.com/uploads/yogya.jpg"
+    },
+    {
+      "name": "Pemprov D.I Yogyakarta",
+      "phoneNumber": "0811-2764-800",
+      "logo": "https://kawalcorona.com/uploads/yogya.jpg"
+    }
+  ]
+}

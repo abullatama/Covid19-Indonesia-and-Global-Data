@@ -26,8 +26,8 @@ body {
     transition: right 300ms ease-in-out;
   }
   &.active {
+    overflow-y: hidden;
     main {
-      position: fixed;
       min-width: 100%;
       right: 16.25rem;
     }
@@ -76,6 +76,7 @@ li {
 .title {
   padding: 2rem;
   margin-bottom: 2rem;
+  margin-top: 4.4375rem;
 
   h1 {
     font-size: 2.5rem;

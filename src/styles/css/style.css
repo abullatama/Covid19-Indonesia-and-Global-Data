@@ -87,8 +87,11 @@ body main {
   transition: right 300ms ease-in-out;
 }
 
+body.active {
+  overflow-y: hidden;
+}
+
 body.active main {
-  position: fixed;
   min-width: 100%;
   right: 16.25rem;
 }
@@ -136,6 +139,7 @@ li {
 .title {
   padding: 2rem;
   margin-bottom: 2rem;
+  margin-top: 4.4375rem;
 }
 
 .title h1 {
@@ -174,7 +178,7 @@ idn-confirmed.white::part(color) {
 }
 
 .header {
-  position: relative;
+  position: fixed;
   top: 0;
   width: 100%;
   padding-top: 0.75rem;
@@ -464,6 +468,56 @@ idn-confirmed.white::part(color) {
   font-size: 0.8125rem;
 }
 
+.hotline {
+  margin-bottom: 4rem;
+}
+
+@media (min-width: 40rem) {
+  .hotline {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 64rem) {
+  .hotline {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.hotline__item {
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  background-color: white;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 8px 24px #e5e4e6;
+}
+
+@media (min-width: 40rem) {
+  .hotline__item {
+    margin-bottom: 0;
+  }
+}
+
+.hotline__item .text {
+  margin-top: 0.9375rem;
+}
+
+.hotline__item .text h5 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.hotline__item .text p {
+  color: #76839a;
+  font-size: 0.8125rem;
+  font-weight: 400;
+}
+
 footer {
   background-color: white;
   padding: 1.25rem;
@@ -471,6 +525,10 @@ footer {
 
 footer .footer {
   text-align: center;
+}
+
+footer .footer a {
+  color: #5e2dd8;
 }
 
 footer .footer .social a {

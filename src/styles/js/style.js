@@ -3,6 +3,7 @@ const body = document.querySelector("body");
 const header = document.querySelector(".header");
 const horizontalMenu = document.querySelector(".horizontal-menu");
 const overflow = document.querySelector(".overflow");
+const sidebar = document.querySelector(".sidebar__menu");
 
 toggle.addEventListener("click", function () {
   header.classList.add("open");
@@ -12,6 +13,13 @@ toggle.addEventListener("click", function () {
 });
 
 overflow.addEventListener("click", function () {
+  header.classList.remove("open");
+  body.classList.remove("active");
+  horizontalMenu.classList.remove("pop-in");
+  horizontalMenu.classList.add("pop-out");
+});
+
+sidebar.addEventListener("click", function () {
   header.classList.remove("open");
   body.classList.remove("active");
   horizontalMenu.classList.remove("pop-in");

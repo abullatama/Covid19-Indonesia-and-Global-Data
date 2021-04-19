@@ -114,14 +114,17 @@ const DataSource = () => {
 
   const myChart = (e) => {
     let date = null;
+    let total = 0;
     const dateArr = [];
     const valueArr = [];
 
     for (let i = 0; i < e.length; i++) {
+      total += e[i].positif;
       if (i == 0 || i % 31 == 0) {
         date = dateModified(e[i].tanggal);
         dateArr.push(date.date);
-        valueArr.push(e[i].positif);
+        valueArr.push(total);
+        total = 0;
       }
     }
 
