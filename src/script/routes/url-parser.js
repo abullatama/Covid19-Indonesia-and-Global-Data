@@ -16,6 +16,7 @@ const UrlParser = {
 
   _urlCombiner(splitedUrl) {
     if (splitedUrl.resource === "dashboard") {
+      console.log("abul ganteng bingit");
       DataSource();
     }
     return splitedUrl.resource ? `/${splitedUrl.resource}` : "/";

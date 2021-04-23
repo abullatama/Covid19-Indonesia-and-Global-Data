@@ -1,5 +1,8 @@
+import DataSource from "../../../data/data-source";
+
 const dashboard = {
   async render() {
+    DataSource();
     return `
         <section class="title">
             <br />
@@ -9,105 +12,105 @@ const dashboard = {
 
         <section class="grid container">
             <div class="grid__item">
-            <div class="grid__content">
-                <div class="grid__text">
-                <p>TOTAL POSITIF</p>
-                <data-positive></data-positive>
-                <p>ORANG</p>
+                <div class="grid__content">
+                    <div class="grid__text">
+                    <p>TOTAL POSITIF</p>
+                    <data-positive></data-positive>
+                    <p>ORANG</p>
+                    </div>
+                    <div class="grid__emoji">
+                    <img
+                        src="./assets/images/sad.png"
+                        alt="sad"
+                        width="50"
+                        height="50"
+                    />
+                    </div>
                 </div>
-                <div class="grid__emoji">
-                <img
-                    src="./assets/images/sad.png"
-                    alt="sad"
-                    width="50"
-                    height="50"
-                />
-                </div>
-            </div>
             </div>
             <div class="grid__item">
-            <div class="grid__content">
-                <div class="grid__text">
-                <p>TOTAL SEMBUH</p>
-                <data-recovered></data-recovered>
-                <p>ORANG</p>
+                <div class="grid__content">
+                    <div class="grid__text">
+                    <p>TOTAL SEMBUH</p>
+                    <data-recovered></data-recovered>
+                    <p>ORANG</p>
+                    </div>
+                    <div class="grid__emoji">
+                    <img
+                        src="./assets/images/happy.png"
+                        alt="sad"
+                        width="50"
+                        height="50"
+                    />
+                    </div>
                 </div>
-                <div class="grid__emoji">
-                <img
-                    src="./assets/images/happy.png"
-                    alt="sad"
-                    width="50"
-                    height="50"
-                />
-                </div>
-            </div>
             </div>
             <div class="grid__item">
-            <div class="grid__content">
-                <div class="grid__text">
-                <p>TOTAL MENINGGAL</p>
-                <data-deaths></data-deaths>
-                <p>ORANG</p>
+                <div class="grid__content">
+                    <div class="grid__text">
+                    <p>TOTAL MENINGGAL</p>
+                    <data-deaths></data-deaths>
+                    <p>ORANG</p>
+                    </div>
+                    <div class="grid__emoji">
+                    <img
+                        src="./assets/images/cry.png"
+                        alt="sad"
+                        width="50"
+                        height="50"
+                    />
+                    </div>
                 </div>
-                <div class="grid__emoji">
-                <img
-                    src="./assets/images/cry.png"
-                    alt="sad"
-                    width="50"
-                    height="50"
-                />
-                </div>
-            </div>
             </div>
             <div class="grid__item">
-            <div class="grid__content">
-                <div class="grid__text">
-                <p class="value">INDONESIA</p>
-                <idn-confirmed class="white"></idn-confirmed>
-                <p>POSITIF</p>
+                <div class="grid__content">
+                    <div class="grid__text">
+                    <p class="value">INDONESIA</p>
+                    <idn-confirmed class="white"></idn-confirmed>
+                    <p>POSITIF</p>
+                    </div>
+                    <div class="grid__emoji">
+                    <img
+                        src="./assets/images/indonesia.png"
+                        alt="sad"
+                        width="50"
+                        height="50"
+                    />
+                    </div>
                 </div>
-                <div class="grid__emoji">
-                <img
-                    src="./assets/images/indonesia.png"
-                    alt="sad"
-                    width="50"
-                    height="50"
-                />
-                </div>
-            </div>
             </div>
             <div class="last-update">
-            <last-update></last-update>
+                <last-update></last-update>
             </div>
         </section>
 
         <section class="container">
             <div class="card">
-            <div class="card__title">
-                <h3>Statistik Kasus Coronavirus di Indonesia</h3>
-            </div>
-            <div class="card__body">
-                <div class="chart">
-                <canvas id="myChart" height="200"></canvas>
+                <div class="card__title">
+                    <h3>Statistik Kasus Coronavirus di Indonesia</h3>
                 </div>
-                <div class="idnData flex flex-jc-sb">
-                <div class="idnData__item">
-                    <h5>POSITIF</h5>
-                    <idn-confirmed class="black"></idn-confirmed>
-                    <p>ORANG</p>
+                <div class="card__body">
+                    <div class="chart">
+                        <canvas id="myChart" height="200"></canvas>
+                    </div>
+                    <div class="idnData flex flex-jc-sb">
+                        <div class="idnData__item">
+                            <h5>POSITIF</h5>
+                                <idn-confirmed class="black"></idn-confirmed>
+                            <p>ORANG</p>
+                        </div>
+                        <div class="idnData__item">
+                            <h5>SEMBUH</h5>
+                                <idn-recovered></idn-recovered>
+                            <p>ORANG</p>
+                        </div>
+                        <div class="idnData__item">
+                            <h5>MENINGGAL</h5>
+                                <idn-deaths></idn-deaths>
+                            <p>ORANG</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="idnData__item">
-                    <h5>SEMBUH</h5>
-                    <idn-recovered></idn-recovered>
-                    <p>ORANG</p>
-                </div>
-                <div class="idnData__item">
-                    <h5>MENINGGAL</h5>
-                    <idn-deaths></idn-deaths>
-                    <p>ORANG</p>
-                </div>
-                </div>
-            </div>
             </div>
         </section>
 
